@@ -17,9 +17,9 @@ const Index = () => {
   // Terminal info data
   const terminalInfo = {
     terminalId: 'SCP-TERM-7734-ALPHA',
-    clearanceLevel: 'LEVEL 4 - TOP SECRET',
+    clearanceLevel: 'LEVEL 5 - O5 COUNCIL',
     location: 'SITE-19 / SECTOR-7G',
-    operator: '[REDACTED]',
+    operator: 'E-06 "THE ARCANA"',
     timestamp: new Date().toISOString().replace('T', ' ').slice(0, 19),
   };
 
@@ -181,56 +181,90 @@ const Index = () => {
 
         {/* Main Content Sections */}
         {showContent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-fade-in-up animate-delay-400">
-            <TerminalBox title="1. PERSONALAKTE" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
-              <p>{'>'} NAME: [DATEN GESCHWÄRZT]</p>
-              <p>{'>'} RANG: FORSCHUNGSLEITER</p>
-              <p>{'>'} ABTEILUNG: EINDÄMMUNG</p>
-              <p>{'>'} STATUS: AKTIV</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in-up animate-delay-400">
+            <TerminalBox title="1. OOC INFORMATIONEN" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} ALTER: 17 JAHRE</p>
+              <p>{'>'} RP-ERFAHRUNG: MEHRERE GMOD SERVER</p>
               <p className="text-muted-foreground mt-2 text-xs">
-                LETZTE AKTIVITÄT: VOR 2 STUNDEN
+                ERFAHRUNG: VERIFIZIERT
               </p>
             </TerminalBox>
 
-            <TerminalBox title="2. AKTUELLER STATUS" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
-              <p className="text-primary">{'>'} ANLAGE: OPERATIV</p>
-              <p>{'>'} EINDÄMMUNG: 98.7% STABIL</p>
-              <p>{'>'} SICHERHEITSLEVEL: ERHÖHT</p>
-              <p>{'>'} PERSONAL VOR ORT: 247</p>
-              <p className="text-destructive mt-2 text-xs animate-pulse">
-                ⚠ 2 ANOMALIEN UNTER BEOBACHTUNG
-              </p>
-            </TerminalBox>
-
-            <TerminalBox title="3. SYSTEMHINWEISE" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
-              <p>{'>'} PROTOKOLL KETER-7 AKTIV</p>
-              <p>{'>'} BACKUP-SYSTEME: ONLINE</p>
-              <p>{'>'} NÄCHSTE WARTUNG: 72:00:00</p>
-              <p>{'>'} NOTFALLPLAN: BEREIT</p>
+            <TerminalBox title="2. IC INFORMATIONEN" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
+              <p className="text-primary">{'>'} PETER MANN (D-KLASSE)</p>
+              <p>{'>'} CODENAME: "MOSSAD" (MTF PVT)</p>
               <p className="text-muted-foreground mt-2 text-xs">
-                ALLE SYSTEME NOMINAL
+                IDENTITÄT BESTÄTIGT
               </p>
             </TerminalBox>
 
-            <TerminalBox title="4. LETZTE ZUGRIFFE" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
-              <p>{'>'} 08:34 - DR. ████████</p>
-              <p>{'>'} 09:12 - AGENT MÜLLER</p>
-              <p>{'>'} 11:45 - [ZUGRIFF VERWEIGERT]</p>
-              <p>{'>'} 14:22 - O5-██</p>
+            <TerminalBox title="3. EIGNUNG FÜR DIE ROLLE" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} INTERESSE AN STRUKTURIERTEN JOBS</p>
+              <p>{'>'} SACHLICHE ENTSCHEIDUNGSFINDUNG</p>
+              <p>{'>'} ERFAHRUNG AUS RP-SERVERN</p>
+              <p>{'>'} ANPASSUNG AN KOMPLEXE SITUATIONEN</p>
             </TerminalBox>
 
-            <TerminalBox title="5. AKTIVE WARNUNGEN" variant="warning" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
-              <p className="text-destructive">{'>'} SCP-███: AKTIVITÄT ERHÖHT</p>
-              <p className="text-destructive">{'>'} SEKTOR 4: QUARANTÄNE</p>
-              <p className="text-muted-foreground">{'>'} SCP-999: STABIL</p>
-              <p className="text-muted-foreground">{'>'} SCP-173: EINGEDÄMMT</p>
+            <TerminalBox title="4. ERFAHRUNG IM BEREICH" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} SCP-RP SERVER</p>
+              <p>{'>'} SERIOUS RP</p>
+              <p>{'>'} SEMI-SERIOUS RP</p>
+              <p>{'>'} HARDCORE & MIDCORE RP</p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                ROLLENSTRUKTUREN BEKANNT
+              </p>
             </TerminalBox>
 
-            <TerminalBox title="6. SCHNELLZUGRIFF" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
-              <p className="hover:text-accent cursor-pointer transition-colors">{'>'} [F1] DATENBANK</p>
-              <p className="hover:text-accent cursor-pointer transition-colors">{'>'} [F2] KOMMUNIKATION</p>
-              <p className="hover:text-accent cursor-pointer transition-colors">{'>'} [F3] SICHERHEIT</p>
-              <p className="hover:text-accent cursor-pointer transition-colors">{'>'} [F4] NOTFALL</p>
+            <TerminalBox title="5. ZEITLICHE VERFÜGBARKEIT" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
+              <p className="text-primary">{'>'} NACH SCHULENDE: VERFÜGBAR</p>
+              <p>{'>'} REGELMÄSSIGE AKTIVITÄT: GARANTIERT</p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                STATUS: AKTIV
+              </p>
+            </TerminalBox>
+
+            <TerminalBox title="6. BESTEHENDE WHITELISTS" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} AKTUELLE WHITELIST-JOBS: KEINE</p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                FREIE KAPAZITÄT VORHANDEN
+              </p>
+            </TerminalBox>
+
+            <TerminalBox title="7. ROLLENSPEZIFISCHE FRAGEN (ETHIKER)" className="opacity-0 animate-fade-in-up md:col-span-2" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} AUFGABE: MASSNAHMEN NACHVOLLZIEHBAR GESTALTEN</p>
+              <p>{'>'} MORAL: HANDLUNGEN KRITISCH HINTERFRAGEN</p>
+              <p>{'>'} BALANCE: SICHERHEIT, NOTWENDIGKEIT, VERANTWORTUNG</p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                ETHIK-PROTOKOLLE VERSTANDEN
+              </p>
+            </TerminalBox>
+
+            <TerminalBox title="8. RP-STORY: E-06 THE ARCANA" className="opacity-0 animate-fade-in-up md:col-span-2" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
+              <p className="text-primary mb-2">{'>'} SUBJEKT: TAKESHI NOSTRA</p>
+              <p>{'>'} URSPRUNG: HOCHBEGABTER FORSCHER</p>
+              <p>{'>'} SPEZIALISIERUNG: EMOTIONEN, WAHRNEHMUNG, VERHALTENSMUSTER</p>
+              <p>{'>'} WENDEPUNKT: EXPERIMENT MIT ANGST-VERSTÄRKENDEM SCP</p>
+              <p>{'>'} ERGEBNIS: SCHWERE PSYCHISCHE SCHÄDEN BEI KOLLEGEN</p>
+              <p>{'>'} AKTION: DOKUMENTATION ETHISCHER FEHLENTSCHEIDUNGEN</p>
+              <p className="text-accent mt-2">{'>'} REKRUTIERUNG DURCH ETHIK-KOMITEE</p>
+              <p>{'>'} NEUE IDENTITÄT: E-06 "THE ARCANA"</p>
+              <p>{'>'} AUSBILDUNG: ETHISCHE THEORIE, PSYCHOLOGIE, MACHTDYNAMIK</p>
+              <p className="text-primary mt-2">{'>'} MAXIME: FORTSCHRITT DARF NIEMALS ÜBER MENSCHLICHKEIT SIEGEN</p>
+            </TerminalBox>
+
+            <TerminalBox title="9. WUNSCHNUMMER" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '900ms', animationFillMode: 'forwards' }}>
+              <p className="text-primary text-lg">{'>'} [E-06]</p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                DESIGNATION ANGEFORDERT
+              </p>
+            </TerminalBox>
+
+            <TerminalBox title="10. SCHLUSSWORT" className="opacity-0 animate-fade-in-up" style={{ animationDelay: '1000ms', animationFillMode: 'forwards' }}>
+              <p>{'>'} MOTIVATION: AKTIVES, STRUKTURIERTES RP</p>
+              <p>{'>'} ANGEBOT: DOKUMENTE VIA DC VERFÜGBAR</p>
+              <p className="text-primary mt-2 text-xs">
+                BEWERBUNG ABGESCHLOSSEN
+              </p>
             </TerminalBox>
           </div>
         )}
